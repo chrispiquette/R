@@ -1,13 +1,17 @@
-## Goal: See how classic cars (vs. other vehicles), credit limit ranges and various global countries effect marketing revenue by modeling their relationships through a neural network.
+## Goal: See how classic cars (vs. other vehicles), credit limit ranges and various global 
+#  countries effect marketing revenue by modeling their relationships through a neural network.
 
 ## Results Summary :
-## Our neural network model is about 2.7 times more likely to accurately predict marketing revenue vs. a random guess (with a margin of error).
+## Our neural network model is about 2.7 times more likely to accurately predict marketing 
+# revenue vs.a random guess (with a margin of error).
 
-## Note: This MySQL + R code is largely based on developer David Colley's article here: https://www.mssqltips.com/sqlservertip/5876/predicting-customer-spend-with-a-neural-network-using-r-and-sql-server/
+## Note: This MySQL + R code is largely based on developer David Colley's article here: 
+# https://www.mssqltips.com/sqlservertip/5876/predicting-customer-spend-with-a-neural-network-using-r-and-sql-server/
 
 ## 1. Load the correct data cleaning packages and libraries .
 ## 2. Establish Local MySQL Connection
-## 3. Read in and prep local MySQL data from ClassicModels customer dataset (MySQL table model here: https://www.richardtwatson.com/dm6e/images/general/ClassicModels.png)
+## 3. Read in and prep local MySQL data from ClassicModels customer dataset (MySQL table model 
+# here: https://www.richardtwatson.com/dm6e/images/general/ClassicModels.png )
 ## 4. Run back-propagation neural network with training data.
 ## 5. Run the same neural network from step 4, with test data.
 
@@ -122,7 +126,8 @@ largest_is_Austria <- max(importedData$is_Austria)
 largest_is_Philippines <- max(importedData$is_Philippines)
 
 
-# coerce all values to our data frame by dividing each observation by the largest value objects we just created for each variable
+# coerce all values to our data frame by dividing each observation by the 
+# largest value objects we just created for each variable
 
 importedData$revenue <- (importedData$revenue/largest) ## dependent variable
 importedData$cars_or_not <- (importedData$cars_or_not/largest_cars_or_not)
@@ -156,7 +161,8 @@ head(importedData)
 str(importedData)
 ### 2996 observations (rows), 24 variables (columns)
 
-## Let's split the imported, cleaned up and normalized data into a Training set (80% of the observations), and Test set (for verifying after training).
+## Let's split the cleaned up and normalized data into a Training set (80% of the observations),
+## and Test set (for verifying after training).
 
 trainset <- importedData[1:2397, ]
 testset <- importedData[2398:2996, ]
@@ -233,7 +239,8 @@ head(indVars)
 nn.results <- compute(nn, indVars)
 results <- data.frame(actual=trainset$revenue, prediction=nn.results$net.result)
 
-# Now, we can calculate the differences by adding a new column into importedData with the values of the differences between importedData$TotalDue and importedData$PredictedTotalDue - a simple subtraction.
+# Now, we can calculate the differences by adding a new column into importedData with 
+# the values of the differences between importedData$TotalDue and importedData$PredictedTotalDue.
 
 comparison <- cbind(trainset$revenue, results$prediction)
 comparison <- data.frame(comparison)
@@ -282,7 +289,8 @@ str(indVars_test)
 nn.results_test <- compute(nn, indVars_test)
 results_test <- data.frame(actual=testset$revenue, prediction=nn.results_test$net.result)
 
-# Now, we can calculate the differences by adding a new column into importedData with the values of the differences between importedData$TotalDue and importedData$PredictedTotalDue - a simple subtraction.
+# Now, we can calculate the differences by adding a new column into importedData with the 
+# values of the differences between importedData$TotalDue and importedData$PredictedTotalDue.
 
 comparison_test <- cbind(testset$revenue, results_test$prediction)
 comparison_test <- data.frame(comparison_test)
