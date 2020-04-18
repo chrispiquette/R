@@ -1,8 +1,7 @@
 # R
  For R scripts.
  
- Here's a diagram of a neural network I ran to model to see how classic cars (vs. other vehicles), credit limit and customer country       
- effect marketing revenue:
+ Here's a diagram of a neural network I ran to see how revenue is related to customers buying classic cars, customer credit limit and customer country.
  
  ![GitHub Logo](https://github.com/chrispiquette/R/blob/master/neural_network_marketing_diagram.png)
  
