@@ -1,4 +1,4 @@
-## Goal: See how classic cars (vs. other vehicles), credit limit ranges and various global countries effect marketing revenue by          modeling their relationships through a neural network.
+## Goal: See how classic cars (vs. other vehicles), credit limit ranges and various global countries effect marketing revenue by modeling their relationships through a neural network.
 
 ## Results Summary :
 ## Our neural network model is about 2.7 times more likely to accurately predict marketing revenue vs. a random guess (with a margin of error).
