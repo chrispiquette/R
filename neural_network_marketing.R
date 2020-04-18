@@ -213,6 +213,15 @@ plot(nn, rep="best", intercept=0)
 nn$result.matrix
 plot(nn)
 
+plot(nn, rep = "best", x.entry = NULL, x.out = NULL,
+     radius = 0.15, arrow.length = 0.2, intercept = TRUE,
+     intercept.factor = 0.4, information = TRUE, information.pos = 0.1,
+     col.entry.synapse = "black", col.entry = "black",
+     col.hidden = "black", col.hidden.synapse = "black",
+     col.out = "black", col.out.synapse = "black",
+     col.intercept = "blue", fontsize = 12, dimension = 6,
+     show.weights = TRUE, file = NULL)
+
 
 # To analyze the training data, we isolate the independent variables into a new data frame 'indVars':
 indVars <- subset(trainset, 
