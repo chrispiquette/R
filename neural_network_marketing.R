@@ -17,7 +17,7 @@
 
 
 ## 1.
-setwd("C:/Users/Christopher/Documents/git/pique_dev_repo/R_Project")
+setwd("C:/my/directory/neuralnetwork")
 
 install.packages("RMySQL")
 install.packages("DBI")
