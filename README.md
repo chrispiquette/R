@@ -6,4 +6,4 @@
  ![GitHub Logo](https://github.com/chrispiquette/R/blob/master/neural_network_revenue_prediction_diagram.png)
  
  Code and details here: 
- https://github.com/chrispiquette/R/edit/master/neural_network_marketing.R
+ https://github.com/chrispiquette/R/blob/master/neural_network_revenue_prediction.R
