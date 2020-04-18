@@ -2,7 +2,7 @@
 ## countries effect revenue by modeling their relationships through a neural network.
 
 ## Results Summary :
-## Our neural network model is about 2.7 times more likely to accurately predict marketing 
+## Our neural network model is about 2.7 times more likely to accurately predict customer 
 ## revenue vs.a random guess (with a margin of error).
 
 ## Note: This MySQL + R code is largely based on developer David Colley's article here: 
@@ -272,7 +272,7 @@ mean(comparison$randomDelta)
 # Mean Random Delta           3,264
 
 ## I.e., our NN is about 2.7 times more likely to accurately predict
-# marketing revenue vs. a random guess, per the training dataset.
+# customer revenue vs. a random guess, per the training dataset.
 
 
 ## 5.
@@ -323,4 +323,4 @@ mean(comparison_test$randomDelta)
 # Mean Random Delta              3,749
 
 ## I.e., our NN is about 2.7 times more likely to accurately predict
-# marketing revenue vs. a random guess.
+# customer revenue vs. a random guess.
