@@ -3,7 +3,7 @@
 
 ## Results Summary :
 ## Our neural network model is about 2.7 times more likely to accurately predict customer 
-## revenue vs.a random guess (with a margin of error).
+## revenue vs. a random guess (with a margin of error).
 
 ## Note: This MySQL + R code is largely based on developer David Colley's article here: 
 ## https://www.mssqltips.com/sqlservertip/5876/predicting-customer-spend-with-a-neural-network-using-r-and-s-server/
