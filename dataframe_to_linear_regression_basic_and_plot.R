@@ -1,8 +1,10 @@
-### Goal:
+### Goal plot a linear regression by: 
+
 ## 1. Reading in a data frame
-## 2. running a linear regression 
-## 3. and plotting it using plot()
-##Before reading in .csv file, underscores must be added to column header names.
+## 2. Running a linear regression 
+## 3. Plotting the linear regression time-series using plot()
+
+## Before reading in .csv file, underscores must be added to column header names.
 
 setwd("C:/Users/Christopher/Documents/R")
 
