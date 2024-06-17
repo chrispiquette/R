@@ -178,7 +178,7 @@ library(neuralnet)
 ## Now train the neural network based on 23 inputs, 1 output
 softmax = custom <- function(x) {log(1+exp(x))}
 nn <- neuralnet(revenue ~ # this is the output variable
-                  cars_or_not +   # these are the independet variables
+                  cars_or_not +   # these are the independent variables
                   creditLimit_mean +
                   is_France +
                   is_USA +
