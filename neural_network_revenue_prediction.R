@@ -170,7 +170,7 @@ testset <- importedData[2398:2996, ]
 ## 4.
 
 ## With our data prepped and broken into Training and Test sets, 
-## let's move into to the neural network architecture setup
+## let's move into to the neural network architecture setup:
 
 install.packages("neuralnet")
 library(neuralnet)
