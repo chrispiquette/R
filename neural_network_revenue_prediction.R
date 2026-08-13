@@ -76,7 +76,6 @@ importedData <- dbGetQuery(classicmodels, "
           # CASE WHEN c.country IN ('Russia') THEN 1 ELSE 0 END AS is_Russia,
           # CASE WHEN c.country IN ('Israel') THEN 1 ELSE 0 END AS is_Israel,
           (quantityOrdered*priceEach) AS revenue
-          -- SUM(quantityOrdered*priceEach) AS revenue
      FROM orderDetails d
      LEFT JOIN (SELECT 
      productCode, 
