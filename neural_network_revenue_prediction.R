@@ -125,8 +125,8 @@ largest_is_Austria <- max(importedData$is_Austria)
 largest_is_Philippines <- max(importedData$is_Philippines)
 
 
-# coerce all values to our data frame by dividing each observation by the 
-# largest value objects we just created for each variable
+# Coerce all values to our data frame by dividing each observation by the 
+# largest value objects we just created for each variable.
 
 importedData$revenue <- (importedData$revenue/largest) ## dependent variable
 importedData$cars_or_not <- (importedData$cars_or_not/largest_cars_or_not)
